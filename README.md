@@ -1,6 +1,6 @@
 # Stable session ID issue
 
-This web application reproduces an issue with the stability of the session ID for initial requests in a pre-authenticated scenario.
+This web application reproduces an issue with the stability of the session ID for initial requests in a pre-authenticated scenario (see this [bug report](https://bz.apache.org/bugzilla/show_bug.cgi?id=60854)).
 In the test case the first request to the application authenticates the user and creates a new session. A JSESSIONID cookie is returned. A client sending this cookie back will get _another_ JSESSIONID cookie in the response. This is not expected.
 
 To simply access the application run
